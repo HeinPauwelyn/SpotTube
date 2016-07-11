@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+    <script type="text/javascript" src="js/opmaak.js"></script>
+    <script src="js/spotifySongs.js" ></script>
+    <link href="css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header"> 
+                <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>-->        
+                <a href="index.html" class="navbar-brand site-title" title="Ga naar home pagina"><span class="fa fa-home"></span> SpotTube</a>
+                <a href="" class="navbar-brand" id="aanmelden">Aanmelden op Spotify</a>
+                <section id="Loginformulier">
+                    <div class="input-group margin-bottom-sm">
+                        <label class="input-group-addon"><span class="fa fa-user"></span> Gebruikersnaam:</label>
+                        <input type="text" id="spotifynaam" class="form-control" placeholder="Gebruikersnaam van Spotify" />
+                    </div>
+                    <div class="margin-bottom-sm">
+                        <button class="btn btn-primary" id="bevestigen">Bevestigen</button>
+                        <button class="btn btn-default" id="annuleren">Annuleren</button>
+                    </div>  
+                    <p class="text-warning">Deze functie gebruikt een <abbr title="Cookies zijn kleine bestanden die gebruikt worden om gegevens op te slaan op uw computer.">cookies</abbr> om de gegevens bij te houden. Indien u dit niet aanvaard, annuleer deze functie.</p>
+                </section>
+            </div>
+            <div class="clearfix"></div>
+            <ul class="breadcrumb">
+                <li><a href="index.html"><span class="fa fa-home"></span> Home</a></li>
+                <li><a href="#" class="naam-artist"></a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<div class="container body-content">
+    <h1 class="naam-artist"></h1>
+    <h2>Top <span class="top-aantal"></span></h2>
+    <hr/>
+    <div id="top"></div>
+
+    <div class="table-responsive col-md-6 col-md-offset-3">
+        <canvas id="graph"></canvas>
+    </div>
+    <div class="clearfix"></div>
+    <h2>Alle albums</h2>
+    <hr/>
+    <div id="result"></div>
+    <div class="">
+        <div class="video col-md-12">
+        </div>
+    </div>
+    <!--<iframe class="frame" src="#"></iframe>-->
+</div>
+
+<footer>
+    <div class="container">
+        <p class="clearfix"><a href="index.html" class="navbar-brand site-title" title="Ga naar home pagina"><span class="fa fa-home"></span> SpotTube</a></p>
+        <p class="clearfix">&copy; bij Hein Pauwelyn - 2NMCT4</p>
+    </div>
+</footer>
+
+<script>
+    $(".body-content")[0].style.minHeight = screen.height - 846 + "px";
+</script>
+
+</body>
+</html>
